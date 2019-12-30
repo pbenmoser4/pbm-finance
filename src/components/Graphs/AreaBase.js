@@ -82,7 +82,7 @@ const AreaBase = props => {
   }
 
   return (
-    <div className="graph-container">
+    <div className="area-base">
       <svg width={width} height={height}>
         <rect x={0} y={0} width={width} height={height} fill="#32deaa" rx={5} />
         <defs>

@@ -13,7 +13,7 @@ const renderSearchInput = ({input, meta}) => {
 }
 
 const SearchForm = props => {
-  const { handleSubmit, reset } = props;
+  const { handleSubmit } = props;
 
   return (
     <Fragment>
