@@ -21,7 +21,6 @@ const AreaBase = props => {
   const { curve } = props;
   const { showTooltip, hideTooltip } = props;
   const { tooltipLeft, tooltipTop, tooltipData } = props;
-  // const { tooltipData } = props;
   const includeGrid = props.includeGrid && true;
 
   const xMax = width - margins.left - margins.right;
@@ -163,6 +162,13 @@ const AreaBase = props => {
             }}
             >
             {`$${yAccessor(tooltipData)}`}
+          </Tooltip>
+          <Tooltip
+            top={yMax - 14}
+            left={tooltipLeft}
+            style={{ transform: 'translateX(-50%)'}}
+            >
+            {formatDate(xAccessor(tooltipData))}
           </Tooltip>
         </div>
       )}

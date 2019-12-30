@@ -1,16 +1,10 @@
 import React, { useState, useRef, useEffect, Fragment } from 'react';
 
-import AreaBase from './Graphs/AreaBase';
+import AreaBase from './AreaBase';
 
 import { curveMonotoneX } from '@vx/curve';
 import { scaleTime, scaleLinear } from '@vx/scale';
-import {
-  appleStock,
-  browserUsage,
-  cityTemperature,
-  groupDateValue,
-  letterFrequency
-} from '@vx/mock-data';
+import { appleStock } from '@vx/mock-data';
 
 const StockGraph = props => {
 

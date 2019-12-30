@@ -4,7 +4,7 @@ import { Container } from 'semantic-ui-react';
 
 import Header from './Header';
 import StockSearch from './StockSearch/StockSearch';
-import StockGraph from './StockGraph';
+import StockGraph from './Graphs/StockGraph';
 
 const App = props => {
   return (
