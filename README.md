@@ -1,5 +1,7 @@
 Playing around with some graphing libraries to create an interactive Stock Chart.
 
+Using [React](https://reactjs.org/), [VX](https://vx-demo.now.sh/) for charting, and [Semantic-UI-React](https://github.com/Semantic-Org/Semantic-UI-React) for easy UI.
+---
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
