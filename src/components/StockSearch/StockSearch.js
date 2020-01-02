@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 
+import faker from 'faker';
+
+// import { appleStock } from '@vx/mock-data';
+
 import SearchForm from './SearchForm';
+import StockView from './StockView/StockView';
+
+import { generateStockData } from '../../testData';
 
 const handleSubmit = formValues => {
   const {searchTerm} = formValues;
@@ -9,8 +16,18 @@ const handleSubmit = formValues => {
 }
 
 const StockSearch = props => {
+  const stockData = generateStockData();
+  const companyInfo = {
+    "name": faker.company.companyName(),
+    "suffix": faker.company.companySuffix(),
+    "bs": faker.company.bs()
+  }
+
   return (
-    <SearchForm onSubmit={handleSubmit}></SearchForm>
+    <Fragment>
+      <SearchForm onSubmit={handleSubmit}></SearchForm>
+      <StockView data={stockData} companyInfo={companyInfo}></StockView>
+    </Fragment>
   )
 }
 

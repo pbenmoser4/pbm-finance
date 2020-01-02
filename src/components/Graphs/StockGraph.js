@@ -4,16 +4,17 @@ import AreaBase from './AreaBase';
 
 import { curveMonotoneX } from '@vx/curve';
 import { scaleTime, scaleLinear } from '@vx/scale';
-import { appleStock } from '@vx/mock-data';
 
 const StockGraph = props => {
 
-  const data = appleStock;
+  const {data} = props;
   const baseWidth = 600;
+  const baseHeight = 400;
 
   const [tooltipData, setTooltipData] = useState(null);
   const [tooltipLeft, setTooltipLeft] = useState(null);
   const [tooltipTop, setTooltipTop] = useState(null);
+
   const [width, setWidth] = useState(baseWidth);
 
   const graphRef = useRef(null);
@@ -36,7 +37,7 @@ const StockGraph = props => {
     <Fragment>
       <div className="stock-graph" ref={graphRef}>
         <AreaBase
-          height={400}
+          height={baseHeight}
           width={width}
           margins={{
             top:0,
@@ -56,7 +57,7 @@ const StockGraph = props => {
             setTooltipLeft(tooltipData.tooltipLeft);
             setTooltipTop(tooltipData.tooltipTop);
           }}
-          hideTooltip={() => console.log('left')}
+          hideTooltip={() => null}
           tooltipLeft={tooltipLeft}
           tooltipTop={tooltipTop}
           tooltipData={tooltipData}

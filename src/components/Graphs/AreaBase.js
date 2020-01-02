@@ -83,7 +83,7 @@ const AreaBase = props => {
   return (
     <div className="area-base">
       <svg width={width} height={height}>
-        <rect x={0} y={0} width={width} height={height} fill="#32deaa" rx={5} />
+        <rect x={0} y={0} width={width} height={height} fill="#32deaa" rx={0} />
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stopColor="#FFFFFF" stopOpacity={0.9} />
@@ -165,7 +165,7 @@ const AreaBase = props => {
           </Tooltip>
           <Tooltip
             top={yMax - 14}
-            left={tooltipLeft}
+            left={tooltipLeft - 14}
             style={{ transform: 'translateX(-50%)'}}
             >
             {formatDate(xAccessor(tooltipData))}

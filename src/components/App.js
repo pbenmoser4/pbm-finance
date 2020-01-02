@@ -4,7 +4,6 @@ import { Container } from 'semantic-ui-react';
 
 import Header from './Header';
 import StockSearch from './StockSearch/StockSearch';
-import StockGraph from './Graphs/StockGraph';
 
 const App = props => {
   return (
@@ -12,7 +11,6 @@ const App = props => {
       <Header ></Header>
       <Container>
         <StockSearch></StockSearch>
-        <StockGraph></StockGraph>
       </Container>
     </Fragment>
   )
