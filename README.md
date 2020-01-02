@@ -1,3 +1,5 @@
+Playing around with some graphing libraries to create an interactive Stock Chart.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
