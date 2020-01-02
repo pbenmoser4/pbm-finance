@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import { Header, Segment } from 'semantic-ui-react';
+import { Segment } from 'semantic-ui-react';
 
 import StockGraph from '../../Graphs/StockGraph';
 import StockOverview from './StockOverview';
@@ -17,10 +17,11 @@ const StockView = props => {
       </Segment>
       <Segment attached style={{
           padding: 0,
+          borderBottom: 0
         }}>
         <StockGraph data={data}></StockGraph>
       </Segment>
-      <Segment attached="bottom">
+      <Segment attached="bottom" style={{borderTop:0}}>
         <StockOverview data={data}></StockOverview>
       </Segment>
     </Fragment>

@@ -2,10 +2,6 @@ import React, { Fragment } from 'react';
 
 import { Statistic, Container } from 'semantic-ui-react';
 
-import { timeFormat } from 'd3-time-format';
-
-const formatDate = timeFormat("%m/%d/%y");
-
 const getSummary = (data) => {
   const dateAccessor = d => new Date(d.date);
   const valueAccessor = d => d.close;
@@ -16,11 +12,9 @@ const getSummary = (data) => {
   const endData = data[data.length - 1];
 
   const startDate = dateAccessor(startData);
-  // const startDateString = formatDate(dateAccessor(startData));
   const startValue = valueAccessor(startData);
 
   const endDate = dateAccessor(endData);
-  // const endDateString = formatDate(dateAccessor(endData));
   const endValue = valueAccessor(endData);
 
   const change = endValue - startValue;

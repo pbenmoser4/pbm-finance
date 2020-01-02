@@ -164,8 +164,8 @@ const AreaBase = props => {
             {`$${yAccessor(tooltipData)}`}
           </Tooltip>
           <Tooltip
-            top={yMax - 14}
-            left={tooltipLeft - 14}
+            top={yMax - 20}
+            left={tooltipLeft}
             style={{ transform: 'translateX(-50%)'}}
             >
             {formatDate(xAccessor(tooltipData))}

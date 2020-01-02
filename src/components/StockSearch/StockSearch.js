@@ -9,20 +9,22 @@ import SearchForm from './SearchForm';
 import StockView from './StockView/StockView';
 
 import { generateStockData } from '../../testData';
+import { generateDummyData } from '../../actions';
 
 const handleSubmit = formValues => {
   const {searchTerm} = formValues;
   console.log(searchTerm);
 }
 
-const StockSearch = props => {
-  const stockData = generateStockData();
-  const companyInfo = {
-    "name": faker.company.companyName(),
-    "suffix": faker.company.companySuffix(),
-    "bs": faker.company.bs()
-  }
+const stockData = generateStockData();
+const companyInfo = {
+  "name": faker.company.companyName(),
+  "suffix": faker.company.companySuffix(),
+  "bs": faker.company.bs()
+}
 
+const StockSearch = props => {
+  console.log(props)
   return (
     <Fragment>
       <SearchForm onSubmit={handleSubmit}></SearchForm>
@@ -36,10 +38,11 @@ const mapStateToProps = state => {
 
   return ({
     values: ts ? ts.values : null,
-    submitSucceeded: ts ? ts.submitSucceeded : false
+    submitSucceeded: ts ? ts.submitSucceeded : false,
+    stock: state.stock
   })
 }
 
 export default connect(
-  mapStateToProps, {}
+  mapStateToProps, { generateDummyData }
 )(StockSearch);
