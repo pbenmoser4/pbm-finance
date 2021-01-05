@@ -17,7 +17,7 @@
     "@vx/scale": "^0.0.193-alpha.0",
     "@vx/shape": "^0.0.193-alpha.0",
     "@vx/tooltip": "^0.0.193-alpha.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "d3-array": "^2.4.0",
     "d3-time-format": "^2.2.3",
     "faker": "^4.1.0",
